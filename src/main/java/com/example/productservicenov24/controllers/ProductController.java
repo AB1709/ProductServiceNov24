@@ -1,6 +1,5 @@
 package com.example.productservicenov24.controllers;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.productservicenov24.dtos.ProductNotFoundExceptionDto;
 import com.example.productservicenov24.exceptions.ProductNotFoundException;
 import com.example.productservicenov24.models.Product;
@@ -9,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.management.InstanceNotFoundException;
 import java.util.List;
 
 @RestController
