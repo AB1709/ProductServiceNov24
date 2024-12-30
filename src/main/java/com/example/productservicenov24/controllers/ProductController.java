@@ -40,14 +40,4 @@ public class ProductController {
     public Product replaceProduct(@PathVariable("id") Long id, @RequestBody Product product) {
         return productService.replaceProduct(id, product);
     }
-
-
-    @ExceptionHandler(ProductNotFoundException.class)
-    private ResponseEntity<ProductNotFoundExceptionDto> handleProductNotFoundException(ProductNotFoundException e) {
-        System.out.println(e.getMessage());
-        ProductNotFoundExceptionDto productNotFoundExceptionDto = new ProductNotFoundExceptionDto();
-        productNotFoundExceptionDto.setErrorCode(e.getId());
-        productNotFoundExceptionDto.setErrorMessage(e.getMessage());
-        return new ResponseEntity<>(productNotFoundExceptionDto, HttpStatus.NOT_FOUND);
-    }
 }
