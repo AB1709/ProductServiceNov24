@@ -1,6 +1,5 @@
 package com.example.productservicenov24.controllers;
 
-import com.example.productservicenov24.dtos.ProductNotFoundExceptionDto;
 import com.example.productservicenov24.exceptions.ProductNotFoundException;
 import com.example.productservicenov24.models.Product;
 import com.example.productservicenov24.services.ProductService;
